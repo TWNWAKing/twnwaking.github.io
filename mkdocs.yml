@@ -1,0 +1,6 @@
+site_name: TWNWAKing's Blog
+site_url: https://twnwaking.github.io
+nav:
+    - Home: index.md
+    - About: about.md
+theme: readthedocs
