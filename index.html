@@ -73,7 +73,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="TWNWAKing&#39;s Blog" class="md-header__button md-logo" aria-label="TWNWAKing's Blog" data-md-component="logo">
       
@@ -139,13 +141,64 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      Home Page
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="contest_template/" class="md-tabs__link">
+        Contest
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="about/" class="md-tabs__link">
+      Detailed About Me
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -158,8 +211,10 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="TWNWAKing&#39;s Blog" class="md-nav__button md-logo" aria-label="TWNWAKing's Blog" data-md-component="logo">
       
@@ -214,13 +269,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-the-blog-of-the-king-of-wrong-answer-in-taiwan" class="md-nav__link">
-    Welcome to the blog of the king of Wrong Answer in Taiwan!
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     我是誰?
   </a>
@@ -238,6 +286,58 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contest" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contest
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contest_template/" class="md-nav__link">
+        Testtt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -284,13 +384,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-the-blog-of-the-king-of-wrong-answer-in-taiwan" class="md-nav__link">
-    Welcome to the blog of the king of Wrong Answer in Taiwan!
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     我是誰?
   </a>
@@ -319,9 +412,9 @@
 
 
 <h1 id="wrong-answerblog"><font color="#000000">歡迎來到臺灣</font><font color="#FF0000"><strong>Wrong Answer</strong></font><font color="#000000">之王的Blog!</font></h1>
-<h2 id="welcome-to-the-blog-of-the-king-of-wrong-answer-in-taiwan"><font color="#000000">Welcome to the blog of the king of </font><font color="#FF0000"><strong>Wrong Answer</strong></font><font color="#000000"> in Taiwan!</font></h2>
-<p><font color="#279536"><strong>AC</strong></font>
-For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<p><font color="#000000">Welcome to the blog of the king of </font><font color="#FF0000"><strong>Wrong Answer</strong></font><font color="#000000"> in Taiwan!</font>
+<font color="#279536"><strong>AC</strong></font>
+為了保持首頁的簡潔，故詳細資料請點 <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
 <h2 id="_1"><font color="#000000">我是誰?</font></h2>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
@@ -340,6 +433,11 @@ For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p
           </div>
         </div>
         
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
       </main>
       
         <footer class="md-footer">
@@ -348,13 +446,13 @@ For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p
       
       
         
-        <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: Detailed About Me" rel="next">
+        <a href="contest_template/" class="md-footer__link md-footer__link--next" aria-label="Next: Testtt" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Detailed About Me
+              Testtt
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -384,7 +482,7 @@ For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.follow", "navigation.top"], "search": "assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.c44cc438.min.js"></script>
