@@ -11,27 +11,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://twnwaking.github.io/aiintro/</loc>
-         <lastmod>2022-04-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://twnwaking.github.io/contest_template/</loc>
          <lastmod>2022-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://twnwaking.github.io/cpintro/</loc>
+         <loc>https://twnwaking.github.io/AI/aiintro/</loc>
          <lastmod>2022-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://twnwaking.github.io/high_school_dsa/</loc>
+         <loc>https://twnwaking.github.io/CP/cpintro/</loc>
          <lastmod>2022-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://twnwaking.github.io/mathintro/</loc>
+         <loc>https://twnwaking.github.io/CP/BasicDSA/high_school_dsa/</loc>
+         <lastmod>2022-04-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://twnwaking.github.io/Math/mathintro/</loc>
          <lastmod>2022-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
