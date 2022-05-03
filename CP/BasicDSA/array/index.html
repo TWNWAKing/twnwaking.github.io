@@ -684,6 +684,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#array_2" class="md-nav__link">
+    動態開點的Array?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index不是整數怎麼辦?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maparray" class="md-nav__link">
+    為何不用Map代替Array
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -986,6 +1007,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#array_2" class="md-nav__link">
+    動態開點的Array?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index不是整數怎麼辦?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maparray" class="md-nav__link">
+    為何不用Map代替Array
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1034,14 +1076,16 @@
 <p>Array，又稱陣列或是數組，為一種十分十分十分常見的資料儲存結構。</p>
 <p>強調三次十分是因為真的是所有之中最常用的，真的太重要啦!</p>
 <h2 id="_1">概念</h2>
-<p>陣列是一個裝同Type的東西的容器，有點像是有限項的數列，可以指定它的大小，但指定後不能改大小了(特殊情況下面有說)，除非你用<a href="../vector/">std::Vector</a></p>
+<p>陣列是一個裝同Type的東西的容器，有點像是有限項的數列，要指定它的大小，指定後不能改大小了，除非你用<a href="../vector/">std::vector</a></p>
+<p>陣列的長相會像這樣: <code>arr[index]=value;</code></p>
+<p><code>index</code>就是第幾項，<code>value</code>就是那項的值。</p>
 <h2 id="_2">宣告</h2>
 <p>C++的宣告方法有三種，以下假設<code>T</code>為資料型別，理論上array什麼都可以裝。<code>N</code>為指定陣列的大小，且假設我們要宣告的array名字叫做<code>arr</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">C</span><span class="o">-</span><span class="n">style</span><span class="w"> </span><span class="n">array</span><span class="o">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">//C-style array:</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">T</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">N</span><span class="p">];</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Array</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">standard</span><span class="w"> </span><span class="k">template</span><span class="w"> </span><span class="n">library</span><span class="p">.</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">//Array in standard template library.</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">array</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">N</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">Fixed</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">//Fixed size vector is same as array.</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="p">(</span><span class="n">N</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>常見的<code>T</code>為<code>int, float, char, string,...</code></p>
@@ -1055,7 +1099,7 @@
 <p>沒啦???</p>
 <p>其實用法蠻多的(?)但是最常用的就真的是裝資料然後讀取它</p>
 <ul>
-<li>請注意array是從第0項開始! 也就是說可以存取<code>arr[0], arr[1], ..., arr[N-1]</code></li>
+<li>請注意array是從第0項開始! 也就是說可以存取<code>arr[0], arr[1], ..., arr[N-1]</code>，每個都代表一個值</li>
 </ul>
 <p>其他可見<a href="https://en.cppreference.com/w/cpp/container/array">https://en.cppreference.com/w/cpp/container/array</a></p>
 <h2 id="_4">指定初始值</h2>
@@ -1103,6 +1147,26 @@
 <h2 id="vector">Vector萬歲</h2>
 <p>(以下是筆者個幹話時間)</p>
 <p>其實我是推崇用Fixed size vector來實現陣列的(?)。</p>
+<p>畢竟Vector如果需要的話可以遍大小，不過就是宣告比較長就是了。</p>
+<h2 id="array_2">動態開點的Array?</h2>
+<p>譬如說我今天有個array a(a的長度<span class="arithmatex">\(\le 10^6\)</span>, <span class="arithmatex">\(0\le a_i\le k\)</span>)，我想統計所有元素中，每個數字出現了多少遍</p>
+<p>最簡單作法就是再開一個k那麼大的另一個陣列來統計。</p>
+<p>但若domain有到<span class="arithmatex">\(10^9\)</span>(注意可以算一下它需要多少容量，反正比賽中開這麼大一定爆炸)，直接裂開了</p>
+<p>注意到問題在哪裡了嗎? 因為array是佔用連續的一段記憶體，而我們要統計的數字最多只有<span class="arithmatex">\(10^6\)</span>個，所以一堆陣列的格子都浪費了</p>
+<p>而且如果今天a有負的項怎麼辦，開不下去啦!</p>
+<p>總的來說，我們需要一個 <strong>動態開點的array</strong> ，要什麼數字開什麼格子就好。</p>
+<p>How? 答案是用平衡樹<code>std::set</code>或是對index做Hashing <code>std::unordered_map</code> (介紹待補)</p>
+<p><del>當然如果你夠毒瘤，用<code>cc_hash_table</code>或是<code>gp_hash_table</code></del> 也可以。</p>
+<h2 id="index">Index不是整數怎麼辦?</h2>
+<p>譬如說我今天想統計貓跟狗有多少隻好了，我可以</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">arr</span><span class="p">[</span><span class="s">&quot;cat&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">arr</span><span class="p">[</span><span class="s">&quot;dog&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>嗎? 當然可以，方法就是上述的平衡樹<code>std::set</code>或是對index做Hashing <code>std::unordered_map</code>。</p>
+<h2 id="maparray">為何不用Map代替Array</h2>
+<p>疑，那為什麼<code>map</code>可以動態開點又有自由的index，為何還需要array呢?</p>
+<p>因為不管是哪種map的存取速度都<strong>遠，遠，遠慢於陣列</strong> (也沒有到慢那麼多啦，但是如果存取元素很多次速度就真的有差了)，所以兩個算是在不同狀況下各司其職。</p>
+<p>但是固定size的<code>vector</code>跟陣列一樣快(再次推銷)。</p>
 
               
 

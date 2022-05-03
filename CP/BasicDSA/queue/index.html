@@ -1029,7 +1029,7 @@
 
 
 <h1 id="queue">Queue</h1>
-<p>Queue是一種資料結構，像是隊列一樣，先進的在隊列的頭。</p>
+<p>Queue是一種資料結構，像是隊列一樣，<strong>先進的在隊列的頭，人要出來的話當然是先進的人先出。</strong></p>
 <h2 id="queue-in-c">Queue in C++</h2>
 <p>C++的STL就有了，直接拿來用吧</p>
 <p>一樣，這裡T指的是塞進去資料的Type</p>
@@ -1077,6 +1077,7 @@
 <p>操作就是頭尾都能修改，雙向的了</p>
 <p><code>deque&lt;T&gt; dq;</code>,<code>dq.push_front;</code>, <code>dq.pop_front;</code>, <code>dq.push_back;</code>, <code>dq.pop_back;</code>之類的，用法差不多。</p>
 <p><a href="https://en.cppreference.com/w/cpp/container/deque">https://en.cppreference.com/w/cpp/container/deque</a></p>
+<p>所以各位有沒有發現stack跟queue其實就是deque砍掉幾個功能而已。</p>
 <h2 id="deque">Deque題目</h2>
 <p>我在這邊放兩個簡單的Deque題</p>
 <h3 id="permutations"><a href="https://cses.fi/problemset/task/1070">Permutations</a></h3>

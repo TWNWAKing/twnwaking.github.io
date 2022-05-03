@@ -1125,11 +1125,12 @@
 <h3 id="sort">如何合併兩個已經Sort好的陣列成一個?</h3>
 <p>這個問題其實也蠻經典的。</p>
 <p>要用到的是雙指針的技巧，但是這裡空間不夠了，之後會在Blog更新雙指針的介紹</p>
+<p>只要先知道要合併兩個長度分別為<span class="arithmatex">\(n,m\)</span>的陣列的複雜度是<span class="arithmatex">\(O(n+m)\)</span></p>
 <p>可以先參考: <a href="https://www.geeksforgeeks.org/merge-two-sorted-arrays/">https://www.geeksforgeeks.org/merge-two-sorted-arrays/</a></p>
 <h3 id="_2">複雜度分析</h3>
 <p>設這樣sort一個總長為<span class="arithmatex">\(n\)</span>的<a href="../array/">array</a>的<a href="../complexity/">時間複雜度</a>為<span class="arithmatex">\(T(n)\)</span></p>
-<p>注意合併長度兩個長度為<span class="arithmatex">\(k\)</span>的已經Sort好的陣列成一個需要的複雜度為<span class="arithmatex">\(O(2k)\)</span></p>
-<p>所以經過分析我們發現，合併的過程就是<strong>處理兩個長度一半的陣列，然後將那兩個陣列合併</strong></p>
+<p>注意合併長度兩個長度為<span class="arithmatex">\(k\)</span>的已經Sort好的陣列成一個需要的複雜度為<span class="arithmatex">\(O(2k)\)</span>(根據上面的公式)</p>
+<p>所以經過分析我們發現，合併的過程就是<strong>處理兩個長度一半的陣列，然後將那兩個長度都是一半的陣列合併</strong></p>
 <p>綜上，我們可以寫出遞迴式子</p>
 <div class="arithmatex">\[T(n)=2T(\dfrac n 2)+O(n)\]</div>
 <h3 id="_3">複雜度分析:怎麼解遞迴</h3>

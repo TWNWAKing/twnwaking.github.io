@@ -991,6 +991,7 @@
 <p>Divide就是把大問題切成小問題(通常是對半切)，注意這邊的小問題其實沒有什麼限制(?)，只要確保是可以劃分成子問題的，且之後能合拼出正確答案就好了。</p>
 <p>Conquer就是瘋狂解決小問題，然後設法合併起來，Done。</p>
 <p>我來展示一點比較"程式"的Demonstration</p>
+<p>以下是分治的一種常見的implementation:</p>
 <ol>
 <li>
 <p>設我們的問題範圍左界是<span class="arithmatex">\(l\)</span>右界<span class="arithmatex">\(r\)</span>，<span class="arithmatex">\(m=\lfloor\dfrac{l+r}{2}\rfloor\)</span></p>
@@ -1003,6 +1004,7 @@
 </li>
 </ol>
 <p>然後第二步會一直劃分下去直到變成<span class="arithmatex">\(l=r\)</span>之類的小問題，就好求解了</p>
+<p>當然分治這個觀念還有很多種型態的應用，只是二分最常見。</p>
 <h2 id="_1">分治的應用</h2>
 <ul>
 <li>
@@ -1029,21 +1031,21 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h3 id="dc-in-ai">D&amp;C in AI</h3>
-<ul>
-<li>快速傅立葉轉換FFT(毒)</li>
-</ul>
-<p>算卷積的時候會用到的一種多項式乘法。</p>
 <ul>
 <li>
-<p><a href="https://oi-wiki.org/misc/parallel-binsearch/">整體二分</a></p>
+<p><a href="https://oi-wiki.org/misc/parallel-binsearch/">整體二分</a>: 看不懂，逃。</p>
 </li>
 <li>
 <p><a href="https://robert1003.github.io/2020/01/31/cdq-divide-and-conquer.html">CDQ分治</a>: <span class="arithmatex">\([l,m]\)</span>所算出來的答案會影響<span class="arithmatex">\([m+1,r]\)</span>所以Merge的時候要比較麻煩一點的處理。</p>
 </li>
 </ul>
+<h3 id="dc-in-ai">D&amp;C in AI</h3>
+<ul>
+<li>快速傅立葉轉換FFT(毒)</li>
+</ul>
+<p>算卷積的時候會用到的一種多項式乘法。</p>
 <h2 id="_2">與動態規劃的不同</h2>
-<p>我覺得我<a href="../DPvsD%26C/">這篇文章</a>寫得蠻精彩且有爭議的，<del>我要看到血流成河</del>。</p>
+<p>我覺得我<a href="../DPvsD%26C/">這篇文章</a>寫得蠻精彩且有爭議的， <del>我要看到血流成河</del> 。</p>
 
               
 
